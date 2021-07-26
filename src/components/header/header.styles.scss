@@ -1,0 +1,44 @@
+.header {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // height: 90px;
+    // width: 100vw;
+    // font-size: 30px;
+    position: relative;
+    margin-bottom: 20px;
+
+
+    .home {
+        // position: absolute;
+        // padding: 0 4px;
+        // left: 30px;
+        // border-bottom: solid;
+        cursor: pointer;
+    }
+
+    .boys {
+        // padding: 0 4px;
+        // margin-right: 70px;
+        cursor: pointer;
+        // border-bottom: solid;
+    }
+    .girls {
+        // padding: 0 4px;
+        // border-bottom: solid;
+        // margin-left: 70px;
+        cursor: pointer;
+    }
+    .statistics {
+        // position: absolute;
+        // padding: 0 4px;
+        // right: 30px;
+        // border-bottom: solid;
+        cursor: pointer;
+    }
+}
+
+// #homeLink {
+//     background-color: #ac3b61;
+//     color: white;
+// }

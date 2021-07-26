@@ -1,0 +1,11 @@
+npm install sass // for scss and sass files
+npm install react-router-dom // for BrowserRouter, Route, Switch
+    -> wrapping index.js in BrowserRouter
+    -> 
+
+npm install tachyons // for easy css styling
+    -> import 'tachyons'; // to the file you want to use it in
+
+npm install redux redux-logger react-redux
+    -> for redux
+    -> import {Provider} from react-redux;

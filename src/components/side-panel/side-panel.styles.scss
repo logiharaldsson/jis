@@ -1,0 +1,19 @@
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    z-index: 9;
+
+    .side-panel-category {
+        margin: 1px 1px 1px 30px;
+        width: 150px;
+        height: 50px;
+        background-color: #AC3B61;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

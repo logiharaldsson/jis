@@ -1,0 +1,16 @@
+.category-page {
+    position: relative;
+  
+    .category-side-panel {
+      top: 0px;
+      position: absolute;
+      z-index: 9;
+    }
+  }
+
+.time-log {
+  position: absolute;
+  top: 400px;
+  left: 250px;
+
+}

@@ -1,0 +1,37 @@
+// .table {
+//     height: 300px;
+//     overflow: scroll;
+// }
+
+.table-container {
+    width: 600px;
+
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    // height: 300px;
+    // max-height: 300px;
+    // overflow: scroll;
+}
+.table-row {
+    // display: flex;
+    // flex-direction: column-reverse;
+    div {
+        width: 200px;
+
+        // padding: 2px 0px;
+    }
+}
+
+.table-header {
+    div {
+        width: 200px;
+        border-bottom: solid;
+    }
+    // width: 50vw;
+
+}
+
+.action {
+    width: 100px;
+}

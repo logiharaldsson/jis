@@ -1,0 +1,105 @@
+.statistics-page-container {
+    // display: flex;
+    // align-items: center;
+    width: 70vw;
+
+    .table-of-boxes {
+        width: 90%;
+    }
+
+    .age-label {
+        width: 90%;
+    }
+
+}
+
+.label-tag-boys {
+    width: 20px;
+    height: 20px;
+    background-color: #123c69;
+    border: solid;
+}
+.label-tag-girls {
+    width: 20px;
+    height: 20px;
+    background-color: #ac3b61;
+    border: solid;
+}
+
+
+.box-box {
+    border: solid;
+}
+
+.statistics-page {
+
+    text-align: center;
+
+    .max-container {
+        margin-top: 100px;
+        margin-left: 100px;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80vw;
+        
+
+        .upper-container {
+            display: flex;
+            justify-content: center;
+            height: 300px;
+
+
+
+            .parent-div {
+                width: 95%;
+                border-bottom: solid;
+                display: flex;
+                justify-content: center;
+
+                .child-div {
+                    margin: 0 50px;
+
+                    display: flex;
+                    align-items: flex-end;
+
+                    .boys-div {
+                        background-color: lightblue;
+                    }
+
+                    .girls-div {
+                        background-color: pink;
+                    }
+                }
+
+
+            }
+
+            .side-div {
+                width: 5%;
+                border-left: solid;
+
+                .side-child {
+                    margin: 30px 0;
+                }
+                
+            }
+        }
+
+        .lower-container {
+            width: 95%;
+            display: flex;
+            justify-content: center;
+
+            .age-container {
+                display: flex;
+                justify-content: space-around;
+                
+                .child-age {
+                    margin: 0 50px;
+                }
+            }
+        }
+}
+}

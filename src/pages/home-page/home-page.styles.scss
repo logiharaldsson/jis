@@ -1,0 +1,19 @@
+.home-page-div {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .text-div {
+        width: 700px;
+        text-align: justify;
+
+        h2 {
+            text-align: center;
+        }
+        
+        span {
+            font-size: 18px;
+        }
+    }
+}
