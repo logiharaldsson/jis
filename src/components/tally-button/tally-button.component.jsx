@@ -18,17 +18,36 @@ const TallyButton = ({ age, gender, counterBox, setCurrentTimeLog, increment, ad
             return removeOneFromCounterArray();
         }
     }
+
     const timeFunction = () => {
         let timeDate = new Date();
         let stringDate = `${timeDate.toLocaleDateString('en-GB')} - ${timeDate.toLocaleTimeString('en-GB')}`;
         let boxNumber = `#${counterBox+1}`;
         return setCurrentTimeLog([gender, age, boxNumber, increment, stringDate])
     }
+
+
+
+    const addToCounter = () => {
+        let sexString = `${gender === 'boys' ? 'B' : 'G'}`;
+        let ageString = age;
+        let boxNumberString = `${counterBox+1}`;
+        let newDBId = sexString+ageString+'#'+boxNumberString;
+        console.log('Sex:',sexString, 'Age: ',ageString, 'Box: ', boxNumberString, 'id:', newDBId);
+        fetch('http://localhost:3001/plustest', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                id: newDBId,
+                tally: increment
+            })
+        }).then(user => console.log(user))
+    }
     
     
     return(
         <div className='tally-button-container f6 dim ph3 pv2 mb2 dib white bg-mid-gray ma2 pointer br3' 
-            onClick={() => {timeFunction(); whatToDispatch()}}>
+            onClick={() => {timeFunction(); whatToDispatch(); addToCounter()}}>
             <div className='tally-button-number'>{increment < 0 ? increment : `+${increment}`}</div>
         </div>
     );

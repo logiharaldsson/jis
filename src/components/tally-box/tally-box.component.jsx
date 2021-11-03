@@ -14,7 +14,7 @@ import { createStructuredSelector } from 'reselect';
 const TallyBox = ({currentCounterArray, currentId, currentCounterBox}) => {
     return (
         <div className='flex flex-column items-center'>
-            <div><h2>{`Fjöldi gjafa í kassa #${currentCounterBox+1}`}</h2></div>
+            <div><h2 className='counter-box-title'>{`Fjöldi gjafa í kassa #${currentCounterBox+1}`}</h2></div>
             <div className="tally-box flex items-center">
                 <TallyButton increment={-1} />
                 <div className='giant-box-container flex justify-center f6 ba bw2 ph3 pv2 mb2 dib ma2 pointer br3'>

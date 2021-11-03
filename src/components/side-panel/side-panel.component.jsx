@@ -15,16 +15,16 @@ const SidePanel = ({ setCurrentAge, setCurrentId, currentGender, setCurrentCount
     
     console.log(currentGender, 'currentGender')
     const sidePanelClassNames = ['one', 'two', 'three', 'four', 'five'];
-    const sidePanelAge = ['0-2 ára', '3-6 ára', '7-10 ára', '11-14 ára', '15+ ára'];
+    const sidePanelAge = ['0-2', '3-6', '7-10', '11-14', '15+'];
     const sidePanels = (idRef) => {
         const panels =  document.querySelectorAll('.side-panel-category');
         const currentPanel = document.getElementById(idRef);
         panels.forEach(element => {
-            element.style.backgroundColor = '#AC3B61';
+            element.style.backgroundColor = 'rgb(65, 64, 64)';
             element.style.color = 'white'
         });
-        currentPanel.style.backgroundColor = '#123C69';
-        currentPanel.style.color = 'white'
+        currentPanel.style.backgroundColor = 'white';
+        currentPanel.style.color = 'rgb(65, 64, 64)'
     }
     return(
         // <div className="side-panel">

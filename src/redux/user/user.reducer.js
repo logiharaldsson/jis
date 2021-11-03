@@ -1,33 +1,7 @@
 // import { setGender } from "./user.utils";
+import JIS_DATA2 from "../../jis_data2";
 
-const INITIAL_STATE = {
-    currentGender: '', 
-    currentAge : '',
-    currentId: 0,
-    currentCounterBox: 0,
-    currentCounterArray : [
-        {id: 0,
-        boxesArray : [0]}, 
-        {id: 1,
-        boxesArray : [0]}, 
-        {id: 2,
-        boxesArray : [0]}, 
-        {id: 3,
-        boxesArray : [0]}, 
-        {id: 4,
-        boxesArray : [0]}, 
-        {id: 5,
-        boxesArray : [0]}, 
-        {id: 6,
-        boxesArray : [0]}, 
-        {id: 7,
-        boxesArray : [0]}, 
-        {id: 8,
-        boxesArray : [0]}, 
-        {id: 9,
-        boxesArray : [0]}]
-};
-
+const INITIAL_STATE = JIS_DATA2;
 
 const userReducer = (state = INITIAL_STATE, action) => {
     switch(action.type) {

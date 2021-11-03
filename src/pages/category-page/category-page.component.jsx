@@ -11,24 +11,53 @@ import { setCurrentGender } from '../../redux/user/user.actions';
 
 
 const CategoryPage = ({ location, setCurrentGender}) => {
+    // let setGender = '';
     if(location.pathname === '/boys'){
         setCurrentGender('boys') 
-    } else if (location.pathname === '/girls'){
-        setCurrentGender('girls')
-      }
-    return (
-        <div>
-          <div className='category-page' >
-            <SidePanel className='category-side-panel'/>
-            <GiantBox className='giant-box' />
-          </div>
-          <div className='flex justify-center time-log'>
-            <TimeLog />
+        // setGender = 'class-boys-background';
+        return (
+          <div>
+            <div className='category-page class-boys-background' >
+              <SidePanel className='category-side-panel'/>
+              <GiantBox className='giant-box' />
+            </div>
+            <div className='flex justify-center time-log'>
+              <TimeLog />
+            </div>
+            
           </div>
           
-        </div>
+      );
+    } else if (location.pathname === '/girls'){
+        setCurrentGender('girls')
+        // setGender = 'class-girls-background';
+        return (
+          <div className='class-girls-background'>
+            <div className='category-page ' >
+              <SidePanel className='category-side-panel'/>
+              <GiantBox className='giant-box' />
+            </div>
+            <div className='flex justify-center time-log'>
+              <TimeLog />
+            </div>
+            
+          </div>
+          
+      );
+      }
+    // return (
+    //     <div>
+    //       <div className='category-page' >
+    //         <SidePanel className='category-side-panel'/>
+    //         <GiantBox className='giant-box' />
+    //       </div>
+    //       <div className='flex justify-center time-log'>
+    //         <TimeLog />
+    //       </div>
+          
+    //     </div>
         
-    );
+    // );
 };
 
 const mapDispatchToProps = dispatch => ({

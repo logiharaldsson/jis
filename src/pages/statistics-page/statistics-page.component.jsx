@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useStore } from 'react-redux';
+
 import 'tachyons';
 
 import StatisticsBar from '../../components/statistics-bar/statistics-bar.component';
@@ -13,6 +15,8 @@ import { selectCurrentCounterArray } from '../../redux/user/user.selector';
 const StatisticsPage = ({ selectCounterArray }) => {
     // get the count on of the boxes from state
     const numberInBoxes = selectCounterArray.map(getNumber);
+    console.log(JSON.stringify(useStore().getState()))
+    console.log((useStore().getState()).user)
     function getNumber(item) {
         let count = 0;
         item.boxesArray.forEach(element => {

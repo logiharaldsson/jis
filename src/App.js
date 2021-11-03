@@ -8,13 +8,53 @@ import Header from './components/header/header.component';
 import HomePage from './pages/home-page/home-page.component';
 import StatisticsPage from './pages/statistics-page/statistics-page.component';
 import CategoryPage from './pages/category-page/category-page.component';
+import TestNew from './pages/test-new/test-new.component';
 
 // WithRouter
 import { withRouter } from 'react-router';
 
-function App() {
+import { auth } from './firebase/firebase.utils'
 
-  return (
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null,
+      currentCounterArray : [
+        {id: 0,
+        boxesArray : []}, 
+        {id: 1,
+        boxesArray : []}, 
+        {id: 2,
+        boxesArray : []}, 
+        {id: 3,
+        boxesArray : []}, 
+        {id: 4,
+        boxesArray : []}, 
+        {id: 5,
+        boxesArray : []}, 
+        {id: 6,
+        boxesArray : []}, 
+        {id: 7,
+        boxesArray : []}, 
+        {id: 8,
+        boxesArray : []}, 
+        {id: 9,
+        boxesArray : []}]
+    }
+  } 
+
+  componentDidMount() {
+    auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user});
+
+      console.log(user);
+    })
+  }
+
+  render() {
+    return (
     
       <div className='app' >
         <Header /> 
@@ -28,6 +68,8 @@ function App() {
       </div>
 
   );
+  }
+
 }
 
 
