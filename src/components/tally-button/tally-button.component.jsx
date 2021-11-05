@@ -34,7 +34,7 @@ const TallyButton = ({ age, gender, counterBox, setCurrentTimeLog, increment, ad
         let boxNumberString = `${counterBox+1}`;
         let newDBId = sexString+ageString+'#'+boxNumberString;
         console.log('Sex:',sexString, 'Age: ',ageString, 'Box: ', boxNumberString, 'id:', newDBId);
-        fetch('http://localhost:3001/plustest', {
+        fetch('http://ancient-caverns-42646.herokuapp.com/plustest', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

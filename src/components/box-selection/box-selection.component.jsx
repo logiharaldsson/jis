@@ -20,7 +20,7 @@ const BoxSelection = ({ setCurrentCounterBox, currentCounterArray, currentId, co
         let boxNumberString = `${myArray[0].boxesArray.length+1}`;
         let newDBId = sexLetter+ageString+'#'+boxNumberString;
         console.log('newDBId ',newDBId)
-        fetch('http://localhost:3001/addNewBox', {
+        fetch('https://ancient-caverns-42646.herokuapp.com/addNewBox', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

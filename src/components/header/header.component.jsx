@@ -19,7 +19,7 @@ const Header = ({setCurrentGender, setCurrentAge, setCurrentCounterArray, select
             return
         }
         // console.log('lolllolllo', selectCounterArray[0])
-        fetch(`http://localhost:3001/category/1`)
+        fetch(`http://ancient-caverns-42646.herokuapp.com/category/1`)
         .then(response => response.json())
         .then(data => {
             if (data){
